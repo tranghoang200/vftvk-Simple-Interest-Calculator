@@ -18,7 +18,7 @@
     sortie+=principal;
     sortie+=" RWF at an interest rate of "
     sortie+=ratevalue;
-    sortie+="%";
+    sortie+="%.";
     sortie+=" You will receive an amount of ";
     sortie+=total;
     sortie+=" RWF in the year ";
