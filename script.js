@@ -10,18 +10,21 @@
     var total= parseFloat(principal*(1+((ratevalue/100)*(time))));
     if(document.getElementById("amount").value==""){
       alert("Please enter the principal amount");
+    } else if(document.getElementById("amount").value <= 0){
+      alert("Please enter a positive number");
+    } else {
+      var today=new Date();
+      var year=today.getFullYear();
+      time+=year;
+      var sortie="If you deposit ";
+      sortie+=principal;
+      sortie+=" RWF at an interest rate of "
+      sortie+=ratevalue;
+      sortie+="%.";
+      sortie+=" You will receive an amount of ";
+      sortie+=total;
+      sortie+=" RWF in the year ";
+      sortie+=time
+      document.getElementById("resultat").innerHTML=sortie;
     }
-    var today=new Date();
-    var year=today.getFullYear();
-    time+=year;
-    var sortie="If you deposit ";
-    sortie+=principal;
-    sortie+=" RWF at an interest rate of "
-    sortie+=ratevalue;
-    sortie+="%.";
-    sortie+=" You will receive an amount of ";
-    sortie+=total;
-    sortie+=" RWF in the year ";
-    sortie+=time
-    document.getElementById("resultat").innerHTML=sortie;
     }   
